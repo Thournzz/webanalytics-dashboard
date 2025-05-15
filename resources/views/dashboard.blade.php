@@ -70,10 +70,10 @@
             <tbody class="divide-y divide-gray-200 dark:divide-gray-600">
                 @foreach ($paginator as $row)
                     <tr>
-                        <td class="px-4 py-2">{{ $row[0] }}</td>
-                        <td class="px-4 py-2">{{ $row[3] }}</td>
-                        <td class="px-4 py-2">{{ $row[6] }}</td>
-                        <td class="px-4 py-2">{{ $row[13] }}</td>
+                        <td class="px-4 py-2">{{ $row[0] ?? 'N/A' }}</td>
+                        <td class="px-4 py-2">{{ $row[3] ?? 'N/A' }}</td>
+                        <td class="px-4 py-2">{{ $row[6] ?? 'N/A' }}</td>
+                        <td class="px-4 py-2">{{ $row[13] ?? 'N/A' }}</td>
                     </tr>
                 @endforeach
             </tbody>

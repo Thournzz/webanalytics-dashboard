@@ -19,7 +19,7 @@ class DashboardController extends Controller
         $rows = array_filter($rows, fn($row) => count($row) > 13);
 
         // Region filtering
-        $region = $request->query('region');
+        $region = $request->query('region', '');
         if ($region) {
             $rows = array_filter($rows, fn($row) => $row[0] === $region);
         }
